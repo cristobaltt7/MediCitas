@@ -1,0 +1,27 @@
+    <resources>
+        <string name="app_name">Medicitas</string>
+
+        <string name="avatar">User Avatar</string>
+        <string name="edit_profile">Edit Profile</string>
+        <string name="change_password">Change Password</string>
+        <string name="logout">Logout</string>
+
+        <string name="user_default">User</string>
+        <string name="email_default">user@example.com</string>
+        <string name="profile_edit_button">Edit Profile</string>
+        <string name="profile_change_password_button">Change Password</string>
+        <string name="profile_logout_button">Logout</string>
+            <string-array name="specialties_array">
+                    <item>Cardiology</item>
+                    <item>Dermatology</item>
+                    <item>Neurology</item>
+                    <item>Pediatrics</item>
+                    <item>General Medicine</item>
+                    <item>Ophthalmology</item>
+                    <item>Orthopedics</item>
+                    <item>Gynecology</item>
+                    <item>Psychiatry</item>
+                    <item>Endocrinology</item>
+            </string-array>
+    </resources>
+

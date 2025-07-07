@@ -1,0 +1,101 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:padding="24dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointments Available"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#003366"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <Spinner
+                        android:id="@+id/specialtySpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"/>
+
+                    <Button
+                        android:id="@+id/filterButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Filter"
+                        android:backgroundTint="#003366"
+                        android:textColor="#FFFFFF"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="16dp"
+                app:strokeColor="#003366"
+                app:strokeWidth="2dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/availableAppointmentsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="480dp"
+                    android:clipToPadding="false"
+                    android:padding="12dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/noAppointmentsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No hay citas disponibles"
+                android:textSize="18sp"
+                android:textColor="#003366"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom|start"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:backgroundTint="#003366"
+        android:src="@drawable/ic_arrow_back"
+        android:contentDescription="Volver"
+        android:layout_margin="16dp" />
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".MedicitasApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.medicitas"
+        tools:targetApi="31">
+
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ReservationsActivity" />
+        <activity android:name=".ReservationsFormActivity" />
+        <activity android:name=".SpecialtiesActivity" />
+        <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".ChangePasswordProfileActivity" />
+        <activity android:name=".AdminDashboardActivity" />
+        <activity android:name=".DoctorAgendaActivity" />
+        <activity android:name=".DoctorDashboardActivity" />
+        <activity android:name=".DoctorReservationsActivity" />
+        <activity android:name=".AvailableAppointmentsActivity" />
+        <activity android:name=".SplashActivity"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

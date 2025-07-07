@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_image"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="¡Welcome to MediCitas!"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#0D5187"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Manage your medical appointments easily and quickly"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="24dp"/>
+
+    <ImageView
+        android:id="@+id/illustrationImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/doctor_illustration"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Illustration" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/illustrationImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewProfileButton"
+            style="@style/MediButton"
+            android:layout_marginTop="5dp"
+            android:text="Profile"
+            android:icon="@drawable/ic_user" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewAvailableAppointmentsButton"
+            style="@style/MediButton"
+            android:text="See available appointments"
+            android:icon="@drawable/ic_calendar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/makeReservationButton"
+            style="@style/MediButton"
+            android:text="Book Appointment"
+            android:icon="@drawable/ic_calendar" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewReservationsButton"
+            style="@style/MediButton"
+            android:text="My Reservations"
+            android:icon="@drawable/ic_list" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logoutButton"
+            style="@style/MediButton"
+            android:text="Logout"
+            android:icon="@drawable/ic_logout"
+            android:iconTint="#B00020"
+            android:textColor="#B00020"/>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/healthTipCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#E3F2FD">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🩺 Health Tip"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#0D5187"/>
+
+            <TextView
+                android:id="@+id/healthTipTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Drink at least 8 glasses of water a day to stay healthy and hydrated."
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
